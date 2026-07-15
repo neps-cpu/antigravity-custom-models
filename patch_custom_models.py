@@ -12,6 +12,11 @@ files_to_patch = [
         "replacement": 'd=true,h=true'
     },
     {
+        "path": r"E:\D\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js",
+        "target": 'this.setSelectedModel(or(Bnc,{choice:{case:"model",value:r}}),void 0,!1)',
+        "replacement": 'this.setSelectedModel(or(Bnc,{choice:{case:"model",value:r}}),((_n_)=>{const t=XJt(_n_);return t?Object.values(t)[0]:void 0})(n),!1)'
+    },
+    {
         "path": r"E:\D\Antigravity IDE\resources\app\out\main.js",
         "target": 'f=o.osName==="linux"&&o.isGoogleInternal,p=o.isGoogleInternal',
         "replacement": 'f=true,p=true'

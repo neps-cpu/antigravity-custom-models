@@ -10,8 +10,12 @@ The custom models UI and dropdown features were restricted to Linux OS and Googl
 
 ### File 1: Renderer Process Bundle
 * **Path:** `E:\D\Antigravity IDE\resources\app\out\vs\workbench\workbench.desktop.main.js`
-* **Original Line:** `d=a.osName==="linux"&&a.isGoogleInternal,h=a.isGoogleInternal`
-* **Modified Line:** `d=true,h=true`
+* **Patch A (Unlock UI dropdown features):**
+  * **Original Line:** `d=a.osName==="linux"&&a.isGoogleInternal,h=a.isGoogleInternal`
+  * **Modified Line:** `d=true,h=true`
+* **Patch B (Fix startup custom model override bug):**
+  * **Original Line:** `this.setSelectedModel(or(Bnc,{choice:{case:"model",value:r}}),void 0,!1)`
+  * **Modified Line:** `this.setSelectedModel(or(Bnc,{choice:{case:"model",value:r}}),((_n_)=>{const t=XJt(_n_);return t?Object.values(t)[0]:void 0})(n),!1)`
 
 ### File 2: Main Process Bundle
 * **Path:** `E:\D\Antigravity IDE\resources\app\out\main.js`
